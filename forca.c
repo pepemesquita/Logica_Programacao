@@ -9,16 +9,22 @@ int main(){
     int acertou = 0;
     int enforcou = 0;
 
+    char chutes[26];
+    int tentativas = 0;
 
     do {
-        char chute;
-        scanf(" %c", &chute);
 
         for (int i = 0; i < strlen(palavrasecreta); i++){
             printf("_ ");
             
         }
         printf("\n\n");
+        
+        char chute;
+        scanf(" %c", &chute);       
+
+        chutes[tentativas] = chute;
+        tentativas++;
         
         }while(!acertou && !enforcou);
 }

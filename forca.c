@@ -10,13 +10,14 @@ void abertura(){
     printf("/****************/\n\n");
 }
 //valores 
-void chuta(char chutes[], int tentativas){
+void chuta(char chutes[], int* tentativas){
     
     char chute;
     printf("Qual é a letra? \n");
     scanf(" %c", &chute);       
 
-    chutes[tentativas] = chute;
+    chutes[*tentativas] = chute;
+    (*tentativas)++;
     }
 
 int main(){
@@ -58,7 +59,7 @@ int main(){
         printf("\n\n");
 
         //passa o valor das variáveis pra minha função chuta
-        chuta(chutes, tentativas);
+        chuta(chutes, &tentativas);
         tentativas++;
 
         }while(!acertou && !enforcou);

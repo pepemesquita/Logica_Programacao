@@ -2,9 +2,9 @@
 
 
 void calcula(int* c){
-    printf("calcula %d %d\n", (*c), c);
+    printf("calcula %d %d\n", *c, c);
     (*c)++;
-    printf("calcula %d %d\n", (*c), c);
+    printf("calcula %d %d\n", *c, c);
 
 }
 
